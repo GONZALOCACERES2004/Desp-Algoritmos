@@ -2,7 +2,7 @@
 
 ## Descripción del Proyecto
 
-Este proyecto tiene como objetivo realizar un análisis de sentimientos sobre reseñas de productos utilizando técnicas de procesamiento de lenguaje natural (NLP) y modelos de aprendizaje automático. Se implementa un modelo de regresión logística para clasificar las reseñas en positivas o negativas. Además, se despliega una API utilizando FastAPI.
+Este proyecto tiene como objetivo realizar un análisis de sentimientos sobre reseñas de productos utilizando técnicas de procesamiento de lenguaje natural (NLP) y modelos de aprendizaje automático. Se implementa un modelo de regresión logística para clasificar las reseñas en positivas o negativas. Además, se utiliza MLflow y se despliega una API utilizando FastAPI.
 
 ## Estructura del Proyecto
 
