@@ -2,7 +2,7 @@
 
 ## Descripción del Proyecto
 
-Este proyecto tiene como objetivo realizar un análisis de sentimientos sobre reseñas de productos utilizando técnicas de procesamiento de lenguaje natural (NLP) y modelos de aprendizaje automático. Se implementa un modelo de regresión logística para clasificar las reseñas en positivas o negativas. Además, se utiliza MLflow y se despliega una API utilizando FastAPI.
+En este proyecto se realiza un análisis de sentimientos sobre reseñas de productos utilizando técnicas de procesamiento de lenguaje natural (NLP) y modelos de aprendizaje automático. Se implementa un modelo de regresión logística para clasificar las reseñas en positivas o negativas. Además, se utiliza MLflow y se despliega una API utilizando FastAPI.
 
 ## Estructura del Proyecto
 
@@ -11,11 +11,11 @@ La estructura del proyecto incluye los siguientes archivos y carpetas:
 /proyecto
 │
 ├── masterclass_despliegue_practica.py # Archivo principal que contiene el flujo del análisis y entrenamiento del modelo.
-├── app_fastapi.py # Archivo que define la API utilizando FastAPI.
 ├── datos_extraidos.csv # Conjunto de datos original con las reseñas.
 ├── datos_procesados.csv # Conjunto de datos procesados listos para el modelado.
-└── util # Carpeta que contiene funciones auxiliares para el preprocesamiento y análisis.
-text
+├── util.py # Archivo que contiene funciones auxiliares para el preprocesamiento y análisis.
+├── main.py # Archivo que orquesta la ejecución de las funciones definidas en util.
+└── py.app_fastapi.py # Archivo que define la API utilizando FastAPI.
 
 ## Archivos Principales
 
@@ -56,21 +56,21 @@ FastAPI es un marco moderno y rápido para construir APIs con Python. Sus ventaj
 1. **Instalación de Dependencias**:
    Asegúrate de tener Python instalado y ejecuta:
 pip install -r requirements.txt
-text
+
 
 2. **Ejecutar el Archivo Principal**:
 Ejecuta el archivo principal para entrenar el modelo:
 python masterclass_despliegue_practica.py
-text
+
 
 3. **Iniciar la API**:
 En otro terminal, ejecuta:
 uvicorn app_fastapi:app --reload
-text
+
 
 4. **Acceder a la Documentación**:
 Visita `http://127.0.0.1:8000/docs` en tu navegador para acceder a la documentación interactiva de la API.
 
 ## Conclusión
 
-Este proyecto combina técnicas avanzadas de análisis de sentimientos con una interfaz accesible a través de una API moderna. Gracias a herramientas como MLflow y FastAPI, se logra no solo un análisis efectivo sino también una implementación práctica que permite a otros interactuar con los modelos entrenados fácilmente.
+Este proyecto integra técnicas avanzadas de análisis de sentimientos mediante un modelo entrenado con datos procesados. El archivo `main.py`, orquesta las funciones definidas en `util.py` para facilitar el entrenamiento y evaluación. Gracias a herramientas como MLflow, se logra un seguimiento efectivo del rendimiento, mejorando así la experiencia general en el análisis y despliegue. Además, se proporciona una API moderna creada con FastAPI que permite a los usuarios interactuar fácilmente con un modelo sin necesidad de conocimientos técnicos profundos.
